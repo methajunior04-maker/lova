@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bien-être | NOUS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/bien-etre.css">
+</head>
+<body>
+    <header class="navbar">
+        <a href="index.html" class="logo">❤️ NOUS</a>
+        <nav aria-label="Navigation principale">
+            <a href="index.html">Accueil</a>
+            <a href="bien-etre.html" aria-current="page">Bien-être</a>
+            <a href="sante.html">Santé &amp; cycle</a>
+            <a href="relation.html">Notre relation</a>
+            <a href="idees.html">Nos idées</a>
+            <a href="calendrier.html">Calendrier</a>
+            <a href="meteo.html">Météo amoureuse</a>
+        </nav>
+    </header>
+    <main>
+        <section class="page-hero">
+            <span>🫂 BIEN-ÊTRE</span>
+            <h1>Comment je vais</h1>
+            <p>Choisissez votre état du jour et partagez le soutien dont vous avez besoin.</p>
+        </section>
+        <section class="section" id="bien-etre">
+            <div class="section-title">
+                <span>AUJOURD'HUI</span>
+                <h2>Comment te sens-tu ?</h2>
+                <p>Choisis ce qui correspond le mieux à ton état aujourd'hui.</p>
+            </div>
+            <div class="person-selector">
+                <button type="button" class="person-button active" data-person="Elle">
+                    <span class="person-icon">👩</span>
+                    <strong>Elle</strong>
+                    <small>Son espace</small>
+                </button>
+                <button type="button" class="person-button" data-person="Moi">
+                    <span class="person-icon">👨</span>
+                    <strong>Moi</strong>
+                    <small>Mon espace</small>
+                </button>
+            </div>
+            <div class="feelings-grid">
+                <button type="button" class="feeling"><span>❤️</span><strong>Je vais bien</strong><small>Tout va bien</small></button>
+                <button type="button" class="feeling"><span>😔</span><strong>Pas très bien</strong><small>J'ai besoin d'attention</small></button>
+                <button type="button" class="feeling"><span>🤒</span><strong>Je suis malade</strong><small>Je ne me sens pas bien</small></button>
+                <button type="button" class="feeling"><span>😴</span><strong>Fatigué(e)</strong><small>J'ai besoin de repos</small></button>
+                <button type="button" class="feeling"><span>💭</span><strong>Moralement</strong><small>Mon moral est bas</small></button>
+                <button type="button" class="feeling"><span>🫂</span><strong>Besoin de soutien</strong><small>J'ai besoin de toi</small></button>
+            </div>
+        </section>
+        <section class="section message-section">
+            <div class="section-title">
+                <span>MESSAGE DE SOUTIEN</span>
+                <h2>Dis ce dont tu as besoin</h2>
+                <p>Tu peux laisser un petit message à ton/ta partenaire.</p>
+            </div>
+            <div class="message-card">
+                <label class="sr-only" for="wellbeingMessage">Ton message</label>
+                <textarea id="wellbeingMessage" placeholder="Exemple : aujourd'hui j'ai besoin de repos et de câlins ❤️..."></textarea>
+                <button type="button" id="saveWellbeing" class="primary-button">
+                    <i class="fa-solid fa-heart"></i> Enregistrer mon état
+                </button>
+            </div>
+        </section>
+        <section class="section history-section" id="historique">
+            <div class="section-title">
+                <span>📖 HISTORIQUE</span>
+                <h2>Nos derniers états</h2>
+                <p>Retrouvez les derniers états enregistrés sur cet appareil.</p>
+            </div>
+            <div id="historyList" class="history-list">
+                <div class="empty-history"><span>💗</span><p>Aucun état enregistré pour le moment.</p></div>
+            </div>
+            <button type="button" id="clearHistory" class="delete-button">
+                <i class="fa-solid fa-trash"></i> Effacer mon historique
+            </button>
+        </section>
+    </main>
+    <footer><p>❤️ NOUS · Prendre soin l'un de l'autre, chaque jour.</p></footer>
+    <script src="js/bien-etre.js"></script>
+</body>
+</html>

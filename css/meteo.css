@@ -1,0 +1,152 @@
+.weather-reflection {
+    max-width: 860px;
+    padding: clamp(20px, 4vw, 34px);
+    border-color: #efd5de;
+    background:
+        radial-gradient(circle at 90% 0, rgba(255, 229, 237, 0.8), transparent 32%),
+        #fff;
+}
+
+.weather-choices {
+    gap: 12px;
+}
+
+.weather-choice {
+    min-height: 118px;
+    padding: 16px 10px;
+    border-radius: 14px;
+    transition: transform 180ms ease, border-color 180ms ease, background 180ms ease, box-shadow 180ms ease;
+}
+
+.weather-choice:hover {
+    transform: translateY(-2px);
+    border-color: var(--pink);
+    box-shadow: 0 8px 20px rgba(180, 70, 105, 0.1);
+}
+
+.weather-choice > span {
+    font-size: 32px;
+    line-height: 1;
+}
+
+.weather-choice strong {
+    font-size: 13px;
+}
+
+.weather-choice.selected {
+    border-color: var(--dark-pink);
+    background: var(--light-pink);
+    box-shadow: 0 8px 20px rgba(201, 54, 100, 0.14);
+    transform: translateY(-2px);
+}
+
+.weather-prompt {
+    display: grid;
+    grid-template-columns: 50px minmax(0, 1fr);
+    align-items: center;
+    column-gap: 14px;
+    margin: 28px 0 22px;
+    padding: 20px 0;
+}
+
+.weather-prompt > span {
+    grid-row: span 2;
+    font-size: 38px;
+    text-align: center;
+}
+
+.weather-prompt h2 {
+    margin: 0;
+    color: var(--text);
+    font-family: "Dancing Script", cursive;
+    font-size: clamp(28px, 4vw, 38px);
+    line-height: 1.1;
+}
+
+.weather-prompt p {
+    margin: 6px 0 0;
+}
+
+.weather-reflection > label {
+    display: block;
+    margin-bottom: 7px;
+}
+
+.weather-reflection textarea {
+    min-height: 110px;
+    margin-bottom: 4px;
+}
+
+.weather-history {
+    max-width: 860px;
+    margin: 38px auto 0;
+}
+
+.weather-history > h2 {
+    margin-bottom: 14px;
+    color: var(--text);
+    font-family: "Dancing Script", cursive;
+    font-size: 34px;
+}
+
+.weather-entry {
+    align-items: start;
+}
+
+.weather-entry h3 {
+    margin-bottom: 3px;
+}
+
+.weather-entry p {
+    margin-top: 8px;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+.weather-entry-delete {
+    padding: 8px 4px;
+    border-radius: 8px;
+}
+
+.weather-entry-delete:hover {
+    background: var(--light-pink);
+}
+
+.weather-empty {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 30px 20px;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    text-align: center;
+}
+
+.weather-empty > span {
+    display: block;
+    margin-bottom: 12px;
+    font-size: 3rem;
+}
+
+.weather-empty p {
+    margin: 0;
+    color: var(--muted);
+}
+
+@media (max-width: 600px) {
+    .weather-choices {
+        gap: 8px;
+    }
+
+    .weather-choice {
+        min-height: 96px;
+    }
+
+    .weather-prompt {
+        grid-template-columns: 38px minmax(0, 1fr);
+        column-gap: 10px;
+    }
+
+    .weather-prompt > span {
+        font-size: 28px;
+    }
+}

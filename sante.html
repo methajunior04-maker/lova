@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santé &amp; cycle | NOUS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/sante.css">
+</head>
+<body>
+    <header class="navbar">
+        <a href="index.html" class="logo">❤️ NOUS</a>
+        <nav aria-label="Navigation principale">
+            <a href="index.html">Accueil</a>
+            <a href="bien-etre.html">Bien-être</a>
+            <a href="sante.html" aria-current="page">Santé &amp; cycle</a>
+            <a href="relation.html">Notre relation</a>
+            <a href="idees.html">Nos idées</a>
+            <a href="calendrier.html">Calendrier</a>
+            <a href="meteo.html">Météo amoureuse</a>
+        </nav>
+    </header>
+    <main>
+        <section class="page-hero">
+            <span>🌸 SANTÉ &amp; CYCLE</span>
+            <h1>Prendre soin de soi</h1>
+            <p>Un espace privé pour noter les informations importantes et suivre le cycle.</p>
+        </section>
+        <section class="section period-section" id="cycle">
+            <div class="section-title">
+                <span>🌸 SUIVI DU CYCLE</span>
+                <h2>Suivi des règles</h2>
+                <p>Note la date de début de tes dernières règles.</p>
+            </div>
+            <div class="period-card">
+                <div class="period-header">
+                    <div class="period-icon">🌸</div>
+                    <div>
+                        <h3>Mes dernières règles</h3>
+                        <p>Ces informations restent sur cet appareil.</p>
+                    </div>
+                </div>
+                <div class="period-form">
+                    <div class="form-group">
+                        <label for="periodDate">Date de début</label>
+                        <input type="date" id="periodDate">
+                    </div>
+                    <div class="form-group">
+                        <label for="periodDuration">Durée approximative</label>
+                        <select id="periodDuration">
+                            <option value="">Sélectionner</option>
+                            <option value="2 jours">2 jours</option>
+                            <option value="3 jours">3 jours</option>
+                            <option value="4 jours">4 jours</option>
+                            <option value="5 jours">5 jours</option>
+                            <option value="6 jours">6 jours</option>
+                            <option value="7 jours">7 jours</option>
+                            <option value="8 jours ou plus">8 jours ou plus</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Niveau de douleur</label>
+                        <div class="pain-options">
+                            <button type="button" data-pain="Aucune">😊 Aucune</button>
+                            <button type="button" data-pain="Légère">🙂 Légère</button>
+                            <button type="button" data-pain="Moyenne">😐 Moyenne</button>
+                            <button type="button" data-pain="Forte">😣 Forte</button>
+                        </div>
+                    </div>
+                    <button type="button" id="savePeriod" class="primary-button">
+                        <i class="fa-solid fa-floppy-disk"></i> Enregistrer le cycle
+                    </button>
+                </div>
+            </div>
+            <div class="period-history">
+                <h3>📅 Historique du cycle</h3>
+                <div id="periodHistory">
+                    <div class="empty-history"><span>🌸</span><p>Aucun cycle enregistré pour le moment.</p></div>
+                </div>
+            </div>
+            <aside class="health-notice">
+                <i class="fa-solid fa-heart"></i>
+                <div>
+                    <strong>Important</strong>
+                    <p>Ces informations servent uniquement au suivi personnel du bien-être et ne permettent pas d'établir un diagnostic médical.</p>
+                </div>
+            </aside>
+        </section>
+    </main>
+    <footer><p>❤️ NOUS · Prendre soin l'un de l'autre, chaque jour.</p></footer>
+    <script src="js/sante.js"></script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notre relation | NOUS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/relation.css">
+</head>
+<body>
+    <header class="navbar">
+        <a href="index.html" class="logo">❤️ NOUS</a>
+        <nav aria-label="Navigation principale">
+            <a href="index.html">Accueil</a>
+            <a href="bien-etre.html">Bien-être</a>
+            <a href="sante.html">Santé &amp; cycle</a>
+            <a href="relation.html" aria-current="page">Notre relation</a>
+            <a href="idees.html">Nos idées</a>
+            <a href="calendrier.html">Calendrier</a>
+            <a href="meteo.html">Météo amoureuse</a>
+        </nav>
+    </header>
+    <main>
+        <section class="page-hero">
+            <span>💗 NOTRE RELATION</span>
+            <h1>Nos besoins &amp; nos limites</h1>
+            <p>Un espace pour mieux nous comprendre, communiquer et prendre soin de notre relation.</p>
+        </section>
+        <section class="section relationship-section" id="relation">
+            <div class="person-selector relationship-person">
+                <button type="button" class="person-button active" data-person="Elle">👩 Elle</button>
+                <button type="button" class="person-button" data-person="Moi">👨 Moi</button>
+            </div>
+            <div class="relationship-grid">
+                <div class="relationship-card">
+                    <div class="relationship-card-icon">❤️</div>
+                    <h3>Ce que j'aime</h3>
+                    <p>Les petites choses qui me font plaisir.</p>
+                    <textarea id="likesInput" placeholder="Ex : J'aime quand tu me demandes comment s'est passée ma journée..."></textarea>
+                </div>
+                <div class="relationship-card">
+                    <div class="relationship-card-icon">😕</div>
+                    <h3>Ce que je n'aime pas</h3>
+                    <p>Les comportements ou situations qui me dérangent.</p>
+                    <textarea id="dislikesInput" placeholder="Ex : Je n'aime pas quand on se parle mal..."></textarea>
+                </div>
+                <div class="relationship-card">
+                    <div class="relationship-card-icon">🫂</div>
+                    <h3>Mes besoins</h3>
+                    <p>Ce qui m'aide à me sentir compris(e) et aimé(e).</p>
+                    <textarea id="needsInput" placeholder="Ex : J'ai besoin de communication et de temps ensemble..."></textarea>
+                </div>
+                <div class="relationship-card">
+                    <div class="relationship-card-icon">🛡️</div>
+                    <h3>Mes limites</h3>
+                    <p>Les choses importantes que l'autre doit respecter.</p>
+                    <textarea id="limitsInput" placeholder="Ex : Je préfère qu'on ne règle pas un conflit sous le coup de la colère..."></textarea>
+                </div>
+            </div>
+            <div class="relationship-goal">
+                <div class="relationship-goal-icon">🎯</div>
+                <div>
+                    <h3>Ce que j'aimerais améliorer</h3>
+                    <p>Une petite chose sur laquelle j'aimerais que nous travaillions ensemble.</p>
+                    <textarea id="goalInput" placeholder="Ex : J'aimerais qu'on prenne plus de temps pour discuter..."></textarea>
+                </div>
+            </div>
+            <button type="button" id="saveRelationship" class="primary-button">
+                <i class="fa-solid fa-heart"></i> Enregistrer mes réponses
+            </button>
+            <div class="relationship-preview">
+                <h2>💕 Ce que nous avons partagé</h2>
+                <div id="relationshipList">
+                    <div class="empty-history"><span>💗</span><p>Rien n'a encore été enregistré.</p></div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer><p>❤️ NOUS · Prendre soin l'un de l'autre, chaque jour.</p></footer>
+    <script src="js/relation.js"></script>
+</body>
+</html>

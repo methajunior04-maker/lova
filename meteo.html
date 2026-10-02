@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Météo amoureuse | NOUS</title>
+    <meta name="description" content="Faire un point sur l'ambiance du jour et garder une trace des moments partagés.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/meteo.css">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="site-nav" aria-label="Navigation principale">
+            <a class="site-brand" href="index.html">❤️ NOUS</a>
+            <ul class="site-links">
+                <li><a href="bien-etre.html">Bien-être</a></li>
+                <li><a href="sante.html">Santé &amp; cycle</a></li>
+                <li><a href="relation.html">Notre relation</a></li>
+                <li><a href="idees.html">Nos idées</a></li>
+                <li><a href="calendrier.html">Calendrier</a></li>
+                <li><a href="meteo.html" aria-current="page">Météo amoureuse</a></li>
+            </ul>
+            <button type="button" class="menu-btn" aria-label="Ouvrir le menu" aria-expanded="false"><span class="menu-icon" aria-hidden="true"></span></button>
+        </nav>
+    </header>
+    <main>
+        <section class="page-hero">
+            <span>❤️ MÉTÉO AMOUREUSE</span>
+            <h1>Notre météo amoureuse</h1>
+            <p>Un petit point de repère pour partager ce que vous ressentez, sans prédire l'avenir.</p>
+        </section>
+        <section class="page-section">
+            <div class="section-heading">
+                <span>LE TEMPS DU JOUR</span>
+                <h2>Comment se passe notre météo ?</h2>
+                <p>Choisissez une ambiance, puis prenez un instant pour en parler.</p>
+            </div>
+            <div class="weather-reflection">
+                <div class="weather-choices" role="group" aria-label="Choisir la météo du jour">
+                    <button type="button" class="weather-choice" data-weather="Ensoleillée"><span aria-hidden="true">☀️</span><strong>Ensoleillée</strong></button>
+                    <button type="button" class="weather-choice" data-weather="Nuageuse"><span aria-hidden="true">☁️</span><strong>Nuageuse</strong></button>
+                    <button type="button" class="weather-choice" data-weather="Pluvieuse"><span aria-hidden="true">🌧️</span><strong>Pluvieuse</strong></button>
+                    <button type="button" class="weather-choice" data-weather="Orageuse"><span aria-hidden="true">⛈️</span><strong>Orageuse</strong></button>
+                </div>
+                <div class="weather-prompt" aria-live="polite">
+                    <span id="weatherIcon" aria-hidden="true">🌤️</span>
+                    <h2 id="weatherPrompt">Choisissez une ambiance</h2>
+                    <p id="weatherQuestion">Il n'y a pas de bonne ou de mauvaise réponse.</p>
+                </div>
+                <label for="weatherNote">Quelques mots, si vous le souhaitez</label>
+                <textarea id="weatherNote" rows="3" maxlength="500" placeholder="Ce que j'aimerais partager aujourd'hui…"></textarea>
+                <button type="button" id="saveWeather" class="primary-button">Garder ce moment</button>
+                <p class="privacy-note">Vos réponses restent dans le navigateur utilisé pour cette page.</p>
+            </div>
+            <section class="weather-history" aria-labelledby="weatherHistoryHeading">
+                <h2 id="weatherHistoryHeading">Nos derniers bulletins</h2>
+                <div id="weatherHistory" class="weather-log">
+                    <div class="empty-state"><span>🌤️</span><p>Aucun bulletin enregistré.</p></div>
+                </div>
+            </section>
+        </section>
+    </main>
+    <footer class="site-footer"><p>❤️ NOUS · Prendre soin l'un de l'autre, chaque jour.</p></footer>
+    <script src="js/site.js"></script>
+    <script src="js/meteo.js"></script>
+</body>
+</html>

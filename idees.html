@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos idées | NOUS</title>
+    <meta name="description" content="Noter vos envies à deux, les classer et suivre leur avancement.">
+    <meta name="theme-color" content="#f7f9f6">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/idees.css">
+    <link rel="stylesheet" href="css/refresh.css">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="site-nav" aria-label="Navigation principale">
+            <a class="site-brand" href="index.html">❤️ NOUS</a>
+            <ul class="site-links">
+                <li><a href="bien-etre.html">Bien-être</a></li>
+                <li><a href="sante.html">Santé &amp; cycle</a></li>
+                <li><a href="relation.html">Notre relation</a></li>
+                <li><a href="idees.html" aria-current="page">Nos idées</a></li>
+                <li><a href="calendrier.html">Calendrier</a></li>
+                <li><a href="meteo.html">Météo amoureuse</a></li>
+            </ul>
+            <button type="button" class="menu-btn" aria-label="Ouvrir le menu" aria-expanded="false"><span class="menu-icon" aria-hidden="true"></span></button>
+        </nav>
+    </header>
+    <main>
+        <section class="page-hero">
+            <span>💡 NOS IDÉES</span>
+            <h1>Nos projets à deux</h1>
+            <p>Gardons ici les petites et grandes choses que nous voulons faire ensemble.</p>
+        </section>
+        <section class="page-section">
+            <div class="section-heading">
+                <span>BOÎTE À IDÉES</span>
+                <h2>Ajouter une idée</h2>
+            </div>
+            <form id="ideaForm" class="idea-form">
+                <div class="form-field">
+                    <label for="ideaTitle">Nom de l'idée</label>
+                    <input id="ideaTitle" name="title" required maxlength="120" placeholder="Ex : Découvrir un nouveau restaurant">
+                </div>
+                <div class="form-field">
+                    <label for="ideaCategory">Catégorie</label>
+                    <select id="ideaCategory" name="category">
+                        <option value="Sortie">Sortie</option>
+                        <option value="Voyage">Voyage</option>
+                        <option value="Maison">Maison</option>
+                        <option value="Projet">Projet</option>
+                        <option value="Autre">Autre</option>
+                    </select>
+                </div>
+                <div class="form-field">
+                    <label for="ideaDescription">Description</label>
+                    <textarea id="ideaDescription" name="description" rows="3" placeholder="Quelques détails utiles…"></textarea>
+                </div>
+                <button type="submit" class="primary-button"><i class="fa-solid fa-lightbulb"></i> Ajouter l'idée</button>
+                <p class="privacy-note">Vos idées restent dans le navigateur utilisé pour cette page.</p>
+            </form>
+            <div class="idea-filters" role="group" aria-label="Filtrer les idées">
+                <button type="button" class="idea-filter active" data-filter="all">Toutes</button>
+                <button type="button" class="idea-filter" data-filter="À faire">À faire</button>
+                <button type="button" class="idea-filter" data-filter="En cours">En cours</button>
+                <button type="button" class="idea-filter" data-filter="Fait">Fait</button>
+            </div>
+            <div id="ideasList" class="idea-list">
+                <div class="empty-state"><span>💡</span><p>Aucune idée enregistrée pour le moment.</p></div>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer"><p>❤️ NOUS · Prendre soin l'un de l'autre, chaque jour.</p></footer>
+    <script src="js/site.js"></script>
+    <script src="js/idees.js"></script>
+</body>
+</html>

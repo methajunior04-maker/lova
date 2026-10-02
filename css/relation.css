@@ -1,0 +1,162 @@
+.relationship-person {
+    margin-bottom: 30px;
+}
+
+.relationship-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.relationship-card {
+    padding: 25px;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.03);
+    transition: 0.2s ease;
+}
+
+.relationship-card:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    transform: translateY(-3px);
+}
+
+.relationship-card-icon {
+    display: grid;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
+    place-items: center;
+    border-radius: 14px;
+    background: var(--light-pink);
+    font-size: 1.5rem;
+}
+
+.relationship-card h3 {
+    margin: 0 0 5px;
+    font-size: 1.05rem;
+}
+
+.relationship-card p,
+.relationship-goal p {
+    margin: 0 0 15px;
+    color: var(--muted);
+    font-size: 0.88rem;
+    line-height: 1.5;
+}
+
+.relationship-card textarea,
+.relationship-goal textarea {
+    width: 100%;
+    min-height: 120px;
+    padding: 14px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    font: inherit;
+    resize: vertical;
+}
+
+.relationship-card textarea:focus,
+.relationship-goal textarea:focus {
+    border-color: var(--pink);
+    outline: 2px solid rgba(220, 100, 130, 0.12);
+}
+
+.relationship-goal {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 25px;
+    padding: 25px;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    background: #fff;
+}
+
+.relationship-goal-icon {
+    display: grid;
+    width: 55px;
+    height: 55px;
+    min-width: 55px;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--light-pink);
+    font-size: 1.5rem;
+}
+
+.relationship-goal h3 {
+    margin: 0 0 5px;
+}
+
+#saveRelationship {
+    display: block;
+    margin: 0 auto;
+}
+
+.relationship-preview {
+    margin-top: 42px;
+}
+
+.relationship-preview h3 {
+    margin-bottom: 18px;
+}
+
+.relationship-answer {
+    margin-bottom: 14px;
+    padding: 20px;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    background: #fff;
+    animation: historyAppear 0.4s ease;
+}
+
+.relationship-answer-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.relationship-answer-person {
+    color: var(--pink);
+    font-weight: 600;
+}
+
+.relationship-answer-date {
+    color: var(--muted);
+    font-size: 0.75rem;
+}
+
+.relationship-answer-item {
+    margin-top: 12px;
+}
+
+.relationship-answer-item strong {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 0.85rem;
+}
+
+.relationship-answer-item p {
+    margin: 0;
+    color: #555;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 700px) {
+    .relationship-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .relationship-goal {
+        flex-direction: column;
+    }
+
+    .relationship-goal-icon {
+        margin-bottom: 5px;
+    }
+}

@@ -1,0 +1,181 @@
+.person-selector {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    max-width: 650px;
+    margin: 0 auto 32px;
+}
+
+.person-button {
+    padding: 18px;
+    border: 2px solid var(--border);
+    border-radius: 18px;
+    background: #fff;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.person-button:hover {
+    transform: translateY(-3px);
+}
+
+.person-button.active {
+    border-color: var(--pink);
+    background: var(--light-pink);
+    box-shadow: var(--shadow);
+}
+
+.person-icon {
+    display: block;
+    margin-bottom: 7px;
+    font-size: 2rem;
+}
+
+.person-button strong,
+.person-button small {
+    display: block;
+}
+
+.person-button small {
+    color: var(--muted);
+}
+
+.feelings-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.feeling {
+    padding: 22px 12px;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    background: #fff;
+    cursor: pointer;
+    text-align: center;
+    transition: 0.2s ease;
+}
+
+.feeling:hover {
+    border-color: var(--pink);
+    box-shadow: var(--shadow);
+    transform: translateY(-4px);
+}
+
+.feeling.selected {
+    border-color: var(--pink);
+    background: var(--light-pink);
+}
+
+.feeling span,
+.feeling strong,
+.feeling small {
+    display: block;
+}
+
+.feeling span {
+    margin-bottom: 10px;
+    font-size: 2.2rem;
+}
+
+.feeling small {
+    margin-top: 5px;
+    color: var(--muted);
+    font-size: 0.78rem;
+}
+
+.message-card {
+    max-width: 750px;
+    margin: auto;
+    padding: 26px;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: var(--shadow);
+}
+
+.message-card .primary-button {
+    display: block;
+    margin-left: auto;
+}
+
+.history-section {
+    max-width: 950px;
+}
+
+.history-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.history-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 18px;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
+}
+
+.history-emoji {
+    font-size: 2rem;
+}
+
+.history-content {
+    min-width: 0;
+    flex: 1;
+}
+
+.history-content strong,
+.history-content small {
+    display: block;
+}
+
+.history-content strong {
+    margin-bottom: 4px;
+    color: var(--pink);
+}
+
+.history-content small {
+    color: var(--muted);
+    font-size: 0.8rem;
+}
+
+.history-message {
+    margin-top: 9px;
+    color: #555;
+    overflow-wrap: anywhere;
+}
+
+.delete-button {
+    display: block;
+    margin: 20px auto 0;
+    border: 0;
+    background: transparent;
+    color: #a64b62;
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 800px) {
+    .feelings-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .person-selector,
+    .feelings-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .message-card {
+        padding: 18px;
+    }
+}
